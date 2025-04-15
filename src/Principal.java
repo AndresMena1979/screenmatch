@@ -1,4 +1,6 @@
 import com.aluracursos.screenmatch.calculos.CalculadoraDeTiempos;
+import com.aluracursos.screenmatch.calculos.FiltroRecomendacion;
+import com.aluracursos.screnmatch.modelos.Episodios;
 import com.aluracursos.screnmatch.modelos.Pelicula;
 import com.aluracursos.screnmatch.modelos.Series;
 
@@ -47,6 +49,19 @@ public class Principal {
 
         System.out.println("Tiempo necesario para ver tus titulos favoritos estas vacaciones " + calculadora.getTiempoTotal());
 
+
+        FiltroRecomendacion filtroRecomendacion = new FiltroRecomendacion();
+
+        filtroRecomendacion.filtra(miPelicula);
+
+        Episodios episodios = new Episodios();
+
+        episodios.setNombre("La Casa Targaryan");
+        episodios.setNumero(1);
+        episodios.setSeries(casaDragon);
+        episodios.setTotalVisualizaciones(300);
+
+        filtroRecomendacion.filtra(episodios);
 
 
 
