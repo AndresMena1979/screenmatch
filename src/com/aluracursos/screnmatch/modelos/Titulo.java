@@ -1,6 +1,6 @@
 package com.aluracursos.screnmatch.modelos;
 
-public class Titulo {
+public class Titulo implements Comparable<Titulo > {
     private String nombre;
     private   int fechaDeLanzamiento;
     private   int duracionEnMinutos;
@@ -8,6 +8,14 @@ public class Titulo {
     private double sumaDeLasEvaluaciones;
     private int totalDeLasEvaluaciones;
 
+    // ------------------------------------------------------------ Creacion de Constructor
+
+
+    public Titulo(String nombre, int fechaDeLanzamiento) {
+        this.nombre = nombre;
+        this.fechaDeLanzamiento = fechaDeLanzamiento;
+    }
+//--------------------------------------------------------------------------------------
 
     public String getNombre() {       //getter para llamar a las variable privadas
         return nombre;
@@ -70,5 +78,10 @@ public class Titulo {
     public double calculaMedia(){
 
         return sumaDeLasEvaluaciones / totalDeLasEvaluaciones;
+    }
+
+    @Override                                           //Permite comparar nombre de  lista que tiene varios atributos
+    public int compareTo(Titulo otroTitulo) {
+        return this.getNombre().compareTo(otroTitulo.getNombre());
     }
 }

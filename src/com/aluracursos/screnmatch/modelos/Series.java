@@ -5,6 +5,11 @@ public class Series extends Titulo {
     int episodiosPorTemporada;
     int minutosPorEpisodio;
 
+//---------------------------------------------------------------------------------------------------
+    public Series(String nombre, int fechaDeLanzamiento) {   //llaamada al constructor de titulo
+        super(nombre, fechaDeLanzamiento);
+    }
+//----------------------------------------------------------------------------------------------------------
     @Override              //indica que este metodo es una sobre escritura
     public int getDuracionEnMinutos() {  // calcular la duracion en minutos de la serie
 
@@ -12,7 +17,7 @@ public class Series extends Titulo {
 
         return temporadas * episodiosPorTemporada * minutosPorEpisodio;
     }
-
+//-------------------------------------------------------------------------------------
     public int getTemporadas() {
         return temporadas;
     }
@@ -37,3 +42,7 @@ public class Series extends Titulo {
         this.minutosPorEpisodio = minutosPorEpisodio;
     }
 }
+
+
+
+
