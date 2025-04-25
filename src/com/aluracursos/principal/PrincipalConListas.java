@@ -5,9 +5,7 @@ import com.aluracursos.screnmatch.modelos.Series;
 import com.aluracursos.screnmatch.modelos.Titulo;
 
 import javax.swing.plaf.SliderUI;
-import java.util.ArrayList;
-import java.util.Collection;
-import java.util.Collections;
+import java.util.*;
 
 public class PrincipalConListas {
 
@@ -50,7 +48,8 @@ for(Titulo item: lista
         }
 
 //---------------------------------------------------------------- Crear y ordenar artistas
-        ArrayList<String> listaDeArtistas = new ArrayList<>();
+       // ArrayList<String> listaDeArtistas = new ArrayList<>();  antes de cambiar a List y LinkedList
+        List<String> listaDeArtistas = new LinkedList<>();
 
         listaDeArtistas.add("Penelope Cruz");
         listaDeArtistas.add("Antonio Banderas");
@@ -66,11 +65,12 @@ for(Titulo item: lista
 
         Collections.sort(lista);
 
-        System.out.println("Lista de Titulos ordenados de lista " + lista ); //genera lista ordenada de Lista que tiene varios atributos
+        System.out.println("Lista de Titulos ordenados de lista\n " + lista ); //genera lista ordenada de Lista que tiene varios atributos
                                                                              // ademas del nombre
 
-
-
+    //...................................................................... Uso de Comparator
+        lista.sort(Comparator.comparing(Titulo ::getFechaDeLanzamiento));
+        System.out.println("Lista ordenada por fecha:\n " + lista);
 
             }
 
