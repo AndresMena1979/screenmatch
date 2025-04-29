@@ -1,0 +1,18 @@
+[
+  {
+    "Nombre": "Anaconda",
+    "FechaDeLanzamiento": 1997,
+    "DuracionEnMinutos": 89,
+    "IncluidoEnElPlan": false,
+    "SumaDeLasEvaluaciones": 0.0,
+    "TotalDeLasEvaluaciones": 0
+  },
+  {
+    "Nombre": "Encantada",
+    "FechaDeLanzamiento": 2008,
+    "DuracionEnMinutos": 13,
+    "IncluidoEnElPlan": false,
+    "SumaDeLasEvaluaciones": 0.0,
+    "TotalDeLasEvaluaciones": 0
+  }
+]
